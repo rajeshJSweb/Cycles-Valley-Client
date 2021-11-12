@@ -38,7 +38,7 @@ const Registration = () => {
         userLoginByGoogle()
     }
     return (
-        <div className="mt-5">
+        <div className="my-5">
             <div className="container form-container">
                 {!isLoading &&
                     <Form className="input-filed" onSubmit={handleRegister}>

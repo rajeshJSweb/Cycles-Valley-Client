@@ -46,7 +46,7 @@ const Login = () => {
     };
 
     return (
-        <div className="mt-5">
+        <div className="my-5">
             <div className="container form-container">
                 <Form className="input-filed" onSubmit={userRegister}>
                     <h3>Sign in or create an account</h3>
