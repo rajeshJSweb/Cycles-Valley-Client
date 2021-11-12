@@ -1,0 +1,27 @@
+.details-container{
+    padding: 10px;
+    border: 1px solid rgb(207, 219, 231);
+    margin: 10px;
+    border-radius: 5px;
+}
+.order-image{
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 7px lightslategrey;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cancel-button{
+    border: none;
+    padding: 3px 7px ;
+    background-color: red;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+}

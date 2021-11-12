@@ -1,0 +1,24 @@
+.details-container{
+    text-align: left;
+}
+.price-container{
+    border-top: 1px solid rgb(228, 235, 243);
+    border-bottom: 1px solid rgb(226, 235, 245);
+}
+.price{
+    padding: 3px 10px;
+    width: 130px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px 100px 0px 0px;
+}
+.essen-container{
+    background-color: rgb(192, 238, 236);
+    width: 70%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 7%;
+    margin-bottom: 10px;
+}

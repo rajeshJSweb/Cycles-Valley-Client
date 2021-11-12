@@ -1,0 +1,51 @@
+[
+  {   "id":1,
+      "key": "B002RL8IYK",
+      "productName": "Rockrider ST-50 Mountain bike.",
+      "details": "This 26 in dry weather.. Everything to make you feel comfortable: the frame with raised position for a straight back, the 80 mm suspension, the exclusive ERGOFIT saddle in the shape of a hammock. Enjoy the comfort of ST 50",
+      "img": "https://i.ibb.co/QbCVRpV/image.jpg",
+      "price": 12000
+  },
+  {   "id":1,
+      "key": "B002RL8IYK",
+      "productName": "Leisure MTB - Rockrider ST 20 HF - 26 Inch - Red & Black",
+      "details": "30 Cycle is Designed for leisure cycling on off-road trails and urban conditions.. ST30 is a 7speed rugged leisure MTB designed to ride on off-road trails and urban conditions. Decathlon offers a lifetime warranty on the frame and fork and 2 Year warranty on non-wearing parts",
+      "img": "https://i.ibb.co/YXXx4My/image-2.png",
+      "price": 1000
+  },
+  {   "id":2,
+      "key": "B002RL8IYO",
+      "productName": "Leisure MTB - Rockrider ST 30 Cycle - 26 Inch - Mint & White",
+      "details": "30 Cycle is Designed for leisure cycling on off-road trails and urban conditions.. ST30 is a 7speed rugged leisure MTB designed to ride on off-road trails and urban conditions. Decathlon offers a lifetime warranty on the frame and fork and 2 Year warranty on non-wearing parts",
+      "img": "https://i.ibb.co/5GKh8sr/image-4.png",
+      "price": 1500
+  },
+  {   "id":3,
+      "key": "B002RK8IYK",
+      "productName": "Sport MTB ST900 S Grey/ Yellow",
+      "details": "This 27.5 MTB is designed for MTB rides lasting over 3 hours, all year round.. Greater efficiency and more control: ROCKSHOX 120mm fork and air shock with handlebar lockout, single chainring, 27.5 lightened double-walled wheels, etc. Enjoy how lightweight the ST 900 S MTB is!",
+      "img": "https://i.ibb.co/2c3Wy55/image5.png",
+      "price": 300
+  },
+  {   "id":4,
+      "key": "B002RL8IBK",
+      "productName": "Sport MTB Rockrider ST520 Grey",
+      "details": " team has developed this 27.5 mountain bike with mechanical disc brakes for your mountain bike touring in all kinds of weather.. Comfort first and foremost: hollow saddle, frame geometry, adjustable stem. And enjoy the effectiveness of the 27.5 wheels with double-wall rims and 24 speeds. The benefits: mechanical disc brakes",
+      "img": "https://i.ibb.co/PGzqJp2/image6.png",
+      "price": 5000
+  },
+  {   "id":5,
+      "key": "B0D2RL8IYK",
+      "productName": "Sport MTB Rockrider ST520 - Yellow",
+      "details": "Cycle is Designed for leisure cycling on off-road trails and urban conditions.. ST30 is a 7speed rugged leisure MTB designed to ride on off-road trails and urban conditions. Decathlon offers a lifetime warranty on the frame and fork and 2 Year warranty on non-wearing parts",
+      "img": "https://i.ibb.co/Jx0CpYH/image7.png",
+      "price": 2000
+  },
+  {   "id":6,
+      "key": "B002RL8IYE",
+      "productName": "Leisure MTB - Rockrider ST 30 Cycle - 26 Inch -Blue & Fluo Orange",
+      "details": " Cycle is Designed for leisure cycling on off-road trails and urban conditions.. ST30 is a 7speed rugged leisure MTB designed to ride on off-road trails and urban conditions. Decathlon offers a lifetime warranty on the frame and fork and 2 Year warranty on non-wearing parts",
+      "img": "https://i.ibb.co/HNPjQMW/service-8.jpg",
+      "price": 1200
+  }
+]

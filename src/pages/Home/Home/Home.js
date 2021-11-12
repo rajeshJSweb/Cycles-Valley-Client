@@ -1,9 +1,15 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
+import DisplayReview from '../DisplayReview/DisplayReview';
+import Products from '../Products/Products/Products';
+import Review from '../Review/Review';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is home page</h1>
+            <Banner></Banner>
+            <Products/>
+            <DisplayReview></DisplayReview>
         </div>
     );
 };
