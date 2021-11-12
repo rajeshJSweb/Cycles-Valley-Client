@@ -22,6 +22,7 @@ import myReview from './pages/Dashboard/Review/myReview';
 import Registration from './pages/Shared/Login/Registration/Registration';
 import ExploreProduct from './pages/Shared/ExploreProduct/ExploreProduct';
 import AdminDashboard from './pages/Admin/Dashboard/AdminDashboard/AdminDashboard';
+import Footer from './pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -66,7 +67,8 @@ function App() {
             <Route path='/admin'>
                 <AdminDashboard></AdminDashboard>
             </Route>
-        </Switch>
+          </Switch>
+          <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>

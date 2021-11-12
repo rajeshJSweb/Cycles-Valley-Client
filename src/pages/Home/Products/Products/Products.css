@@ -1,0 +1,14 @@
+.title{
+    padding-top: 10%;
+    background-color: rgb(242, 245, 245);
+    box-shadow: 3px 0px 5px rgb(233, 227, 227);
+    border-radius: 10px 10px 0px 0px;
+}
+.trend{
+    font-size: 60px;
+    color: #0079ba;
+}
+.nearYour{
+    color: rgb(153, 5, 5);
+    font-size: 53px;
+}

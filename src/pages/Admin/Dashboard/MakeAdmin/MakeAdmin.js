@@ -7,11 +7,12 @@ const MakeAdmin = () => {
     
     const handleOnBlur = e => {
         setEmail(e.target.value)
+        setEmail('')
     }
 
     const onSubmit = data => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://enigmatic-hollows-08621.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json' 
@@ -29,13 +30,13 @@ const MakeAdmin = () => {
         data.preventDefault();
     };
     return (
-        <div>
-            <h4>Make a new user as admin role!</h4>
+        <div className="mt-5">
+            <h4>Create a new admin!</h4>
             <form onSubmit={onSubmit}>
                 <input onBlur={handleOnBlur} type="email" placeholder="Enter Email" />
             <input type="submit" />
             </form>
-            {success && <h5>Admin created successfully</h5>}
+            {success && <h6 className="pt-3">Admin created successfully</h6>}
         </div>
     );
 };

@@ -6,13 +6,13 @@ const ManageOrder = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageOrder')
+        fetch('https://enigmatic-hollows-08621.herokuapp.com/manageOrder')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })

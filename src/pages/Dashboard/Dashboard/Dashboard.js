@@ -6,6 +6,7 @@ import useAuth from '../../../hooks/useAuth/useAuth';
 import AddProduct from '../../Admin/Dashboard/AddProduct/AddProduct';
 import MakeAdmin from '../../Admin/Dashboard/MakeAdmin/MakeAdmin';
 import ManageAllProduct from '../../Admin/Dashboard/ManageAllProduct/ManageAllProduct';
+import Review from '../../Home/Review/Review';
 import ManageOrder from '../ManageOrder/ManageOrder';
 import MyOrder from '../MyOrder/MyOrder';
 import Payment from '../Pay/Payment';
@@ -35,8 +36,8 @@ const Dashboard = () => {
                     <div>
                         <li className="li-item" onClick={()=>setControl("myOrder")}>My Order</li>
                         <li className="li-item" onClick={()=>setControl("payment")}>Pay</li>
-                        <li className="li-item" onClick={()=>setControl("review")}>Review</li>
-                        <li className="li-item" onClick={signOut}>Log Out</li>
+                        <li className="li-item" onClick={()=>setControl("myReview")}>Review</li>
+                        {/* <li className="li-item" onClick={signOut}>Log Out</li> */}
                     </div>
                     
                     {admin && <div>
@@ -49,7 +50,8 @@ const Dashboard = () => {
                 <Col md={9}>
                     {control === "myOrder"&& <MyOrder></MyOrder>}
                     {control === "payment"&& <Payment></Payment>}
-                    {control === "review"&& <myReview></myReview>}
+                    {control === "review" && <myReview></myReview>}
+                    {control === 'myReview' && <Review></Review>}
                     {control === "addProduct" && <AddProduct></AddProduct>}
                     {/* {control === "manageOrder" && <ManageOrder></ManageOrder>} */}
                     {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}

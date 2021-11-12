@@ -64,7 +64,7 @@ const Login = () => {
                 </Form.Group>
                 <input className="btn btn-primary my-3" type="submit" value="Continue with email" />
                     <br />
-                <Link className="already my-3" to="/registration">New User?</Link>
+                <Link className="already my-3" to="/register">New User?</Link>
                     <p>Or</p>
                 <Button onClick={userSignInUsingGoogle} className="btn btn-primary">Google Sign In</Button>
                 </Form>

@@ -12,7 +12,7 @@ const AddCart = () => {
     const [singleCycle, setSingleCycle] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://enigmatic-hollows-08621.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setCycleDetails(data))
     }, []);
@@ -22,7 +22,7 @@ const AddCart = () => {
         setSingleCycle(findCycle)
     },[cycleDetails])
     return (
-        <div className="container mt-5">
+        <div className="container my-5">
             <Row xs={1} md={2}>
                 <Col>
                     <Card className="mt-5 me-5">
@@ -52,30 +52,26 @@ const AddCart = () => {
              <Col>
             <Card className="text-center">
                 <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Title>Made For</Card.Title>
                     <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                        {singleCycle?.details}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">See Details</Button>
                     </Card.Body>
                      </Card>
                 </Col>
              <Col>
             <Card className="text-center">
                 <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Title>Technical Information</Card.Title>
                     <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                        {singleCycle?.techInfo}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Now More</Button>
                     </Card.Body>
                      </Card>
                 </Col>
             </Row>
-            </div>
-            <div className="my-5">
-                <h4>Write your review here!</h4>
-                <Review></Review>
             </div>
         </div>
     );

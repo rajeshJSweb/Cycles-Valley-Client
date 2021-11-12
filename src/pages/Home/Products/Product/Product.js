@@ -12,7 +12,7 @@ const Product = (props) => {
                 <Card className="card-container">
                     <Card.Img variant="top" className="card-image" src={img} />
                     <Card.Body>
-                    <Card.Text className="text-start bg-warning p-1 product-price">
+                    <Card.Text className="text-start p-1 product-price">
                             $ {price}
                     </Card.Text>
                         <h6 className="text-start">{productName}</h6>

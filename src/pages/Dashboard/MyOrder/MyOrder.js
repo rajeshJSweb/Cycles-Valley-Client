@@ -13,21 +13,21 @@ const MyOrder = () => {
     const [control, setControl]=useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user.email}`)
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/myOrder/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [control])
 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })
             .then(res => res.json())
             .then(data => {
-                // if (data.insertedId !== id) {
-                //     alert('Deleted')
-                // }
+                if (data.insertedId !== id) {
+                    alert('Deleted')
+                }
                 if (data.deletedCount) {
                     setControl(!control)
                 }

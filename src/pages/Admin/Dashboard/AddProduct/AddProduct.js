@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/addProduct', data)
+        axios.post('https://enigmatic-hollows-08621.herokuapp.com/addProduct', data)
       .then(res => {
         if (res.data.insertedId) {
             alert('New Product Added')

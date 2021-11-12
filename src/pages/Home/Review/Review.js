@@ -9,7 +9,7 @@ const Review = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://enigmatic-hollows-08621.herokuapp.com/review', data)
       .then(res => {
         if (res.data.insertedId) {
         alert('Review Submited')
@@ -17,19 +17,20 @@ const Review = () => {
     }) 
     };
     return (
-        <div>
+      <div>
+        <h4>Write your review here!</h4>
               <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
-                <input className="inputFilied" placeholder="Write Your Name" {...register("name")} />
+                <input className="inputFilied" placeholder="Write Your Name" {...register("userName")} />
                 
                 {/* include validation with required or other standard HTML validation rules */}
-                <input className="inputFilied" defaultValue={user.email} {...register("email", { required: true })} />
+                <input className="inputFilied" placeholder='Your Email' {...register("email", { required: true })} />
                 <br />
-                <label>Write Your Review</label><br />
-                <input className='reviewFilied' {...register("review", { required: true })} />
+                <label>Details</label><br />
+                <textarea className='reviewFilied'  {...register("reviewDetails", { required: true })} />
                 <br />
                 {/* errors will return when field validation fails  */}
-                {errors.exampleRequired && <span>This field is required</span>}
+                {errors.exampleRequired && <span>This field is require</span>}
                 <input type="submit" />
                 </form>
         </div>

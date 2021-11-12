@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import './ManageAllProduct.css'
 
 const ManageAllProduct = () => {
     const [products, setProducts] = useState([]);
     const [control, setControl]=useState(false)
     useEffect(() => {
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://enigmatic-hollows-08621.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     },[])
 
 
     const handleDeleteProduct = id => {
-        fetch(`http://localhost:5000/deleteProduct/${id}`, {
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })
@@ -47,7 +48,7 @@ const ManageAllProduct = () => {
                         <td>{ product?.productName}</td>
                         <td>{product?.price}</td>
                         <td>Update</td>
-                        <td className="bg-warning text-bold" onClick={() => handleDeleteProduct(product?._id)}>Delete X</td>
+                        <td className="bg-warning delete-item" onClick={() => handleDeleteProduct(product._id)}>Delete X</td>
                     </tr>)        
                 }
           

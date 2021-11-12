@@ -1,8 +1,10 @@
 .reviewFilied{
     height: 120px;
-    width: 62%;
+    width: 90%;
     margin-bottom: 20px;
 }
 .inputFilied{
+    width: 30%;
+    padding: 2px 5px;
     margin: 10px;
 }

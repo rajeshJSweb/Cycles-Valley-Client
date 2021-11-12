@@ -32,7 +32,6 @@ const Header = () => {
                 <Nav.Link className='text-white fw-bold' as={Link} to="/home">Home</Nav.Link>
                 <Nav.Link className='text-white fw-bold' as={Link} to="/about">About</Nav.Link> 
                 <Nav.Link className='text-white fw-bold' as={Link} to="/contact">Contact</Nav.Link>
-                <Nav.Link className='text-white' as={Link} to="/login">Login</Nav.Link>
               </Nav>
               <Nav>
               <Nav.Link className='text-white fw-bold' as={Link} to="/explore">Explore</Nav.Link>
@@ -43,7 +42,7 @@ const Header = () => {
         {
                   user.email ?
                     <Nav.Link className='text-white fw-bold' as={Link} to="/dashboard"><button onClick={signOut}>Log Out</button></Nav.Link> :
-                    <Nav.Link className='text-white' as={Link} to="/register">Register</Nav.Link>  
+                    <Nav.Link className='text-white' as={Link} to="/login">Login</Nav.Link>  
                 }
                 
     </Nav>

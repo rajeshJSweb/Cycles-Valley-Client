@@ -1,52 +1,3 @@
-/* import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
-import useAuth from '../../../hooks/useAuth/useAuth';
-
-const OrderConfirm = () => {
-    const { user } = useAuth({});
-    const { _id } = useParams()
-    const [orders, setOrders] = useState({});
-    const email= sessionStorage.getItem("email")
-
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
-    const onSubmit = data => {
-        data.email = user.email;
-        fetch("http://localhost:5000/confirmOrder", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify()
-        })
-            .then(res => res.json())
-            .then(result => console.log(result))
-        };
-    
-
-    
-    useEffect(() => {
-        fetch(`http://localhost:5000/singleOrder/${_id}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    },[])
-
-
-    return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-            <input defaultValue={orders?.productName} {...register("productName")} />
-            <input defaultValue={orders?.price} {...register("price", { required: true })} />
-            {errors.exampleRequired && <span>This field is required</span>}
-            <input type="submit" />
-            </form>
-        </div>
-    );
-};
-
-export default OrderConfirm; */
-
 import Button from '@restart/ui/esm/Button';
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
@@ -69,7 +20,7 @@ const OrderConfirm = () => {
 
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/confirmOrder', data)
+        axios.post('https://enigmatic-hollows-08621.herokuapp.com/confirmOrder', data)
       .then(res => {
         if (res.data.insertedId) {
             history.push(redirect_uri);
@@ -81,12 +32,12 @@ const OrderConfirm = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleOrder/${_id}`)
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/singleOrder/${_id}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     },[])
     return (
-        <div>
+        <div className="mb-5">
             <div>
             <div>
                     <h3>Complete your order</h3>

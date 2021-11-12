@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './DisplayReview.css'
-import { Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 const DisplayReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://enigmatic-hollows-08621.herokuapp.com/review')
             .then(res => res.json())
             .then(data =>setReviews(data))
     },[])
     return (
-        <div className="container my-5 review-container">
-            <Row xs={1} md={2}>
-                <Col md={3}>
-                    <img className="review-image" src="" alt="" />
-                </Col>
-                <Col md={9}>
-                {
-                    reviews.map(review => <div>
-                        <h3>{review.name}</h3>
-                        <p>{review.review}</p>
-                    </div>)
-                }
-                </Col>
-            </Row>
+        <div className=" my-5 review-container">
+            <h3>CUSTOMERS WE CARE</h3>
+            <Card className='container'>
+                <Card.Body>
+                    {
+                        reviews.map(review => <blockquote className="blockquote mb-0">
+                        <p>
+                            {' '}
+                            {review.reviewDetails}{' '}
+                        </p>
+                        <footer className="blockquote-footer">
+                                by <cite title="Source Title">{ review.userName}</cite><br />
+                                <cite title="Source Title"><small>{ review.email}</small></cite>
+                        </footer>
+                        </blockquote>)
+                    }
+                </Card.Body>
+                </Card>
         </div>
     );
 };

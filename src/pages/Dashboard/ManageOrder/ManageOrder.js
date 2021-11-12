@@ -7,7 +7,7 @@ const ManageMyOrder = ({ order }) => {
     const { productName, img } = order;
 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })
@@ -26,7 +26,7 @@ const ManageMyOrder = ({ order }) => {
                     <img className="order-image" src={order?.img} alt="" />
                 </Col>
                 <Col md={9} className="details">
-                    <h5>{order?.productName}</h5>
+                    <h5>{productName}</h5>
                     <Button className='cancel-button' onClick={() => handleDeleteOrder(order?._id)}>Cancel Order <span>X</span></Button>
                 </Col>
             </Row>

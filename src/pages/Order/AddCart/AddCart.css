@@ -12,7 +12,8 @@
     font-size: 30px;
     margin-top: 5%;
     margin-bottom: 5%;
-    border-radius: 5px 100px 0px 0px;
+    width: 130px;
+    transform: skew(20deg);
 }
 .essen-container{
     background-color: rgb(192, 238, 236);
