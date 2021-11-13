@@ -36,11 +36,11 @@ const Header = () => {
               </Nav>
               <Nav>
               
-      {           
+              {           
                   user.email&&<Nav.Link className='text-white' as={Link} to="/dashboard">Dashboard</Nav.Link>
                 }
                 <Nav.Link className='text-white fw-bold'>{ user.displayName}</Nav.Link>
-        {
+                {
                   user.email ?
                     <Nav.Link className='text-white fw-bold' as={Link} to="/dashboard"><button onClick={signOut}>Log Out</button></Nav.Link> :
                     <Nav.Link className='text-white' as={Link} to="/login">Login</Nav.Link>  

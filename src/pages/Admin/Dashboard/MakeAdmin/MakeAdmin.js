@@ -1,13 +1,11 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const MakeAdmin = () => {
     const [email, setEmail] = useState('')
     const [success, setSuccess] = useState(false);
     
     const handleOnBlur = e => {
         setEmail(e.target.value)
-        setEmail('')
     }
 
     const onSubmit = data => {
@@ -22,13 +20,13 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.modifiedCount) {
-                    setEmail('')
                     setSuccess(true)
                 }
         }) 
-       
         data.preventDefault();
     };
+
+    
     return (
         <div className="mt-5">
             <h4>Create a new admin!</h4>

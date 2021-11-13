@@ -5,6 +5,7 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../hooks/useAuth/useAuth';
 import AddProduct from '../../Admin/Dashboard/AddProduct/AddProduct';
 import MakeAdmin from '../../Admin/Dashboard/MakeAdmin/MakeAdmin';
+import ManageAllOrder from '../../Admin/Dashboard/ManageAllOrder/ManageAllOrder';
 import ManageAllProduct from '../../Admin/Dashboard/ManageAllProduct/ManageAllProduct';
 import Review from '../../Home/Review/Review';
 import ManageOrder from '../ManageOrder/ManageOrder';
@@ -16,6 +17,8 @@ const Dashboard = () => {
     const { admin,logOut } = useAuth({})
     const [control, setControl] = useState("myOrder");
     
+    console.log(admin);
+
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
@@ -28,23 +31,26 @@ const Dashboard = () => {
           });
       }
 
+
     return (
         <div className="container mt-3">
             <Row sx={2} md={2}>
                 <Col md={3} className="sidebar-container">
                     <h5>Dashboard</h5>
-                    <div>
-                        <li className="li-item" onClick={()=>setControl("myOrder")}>My Order</li>
-                        <li className="li-item" onClick={()=>setControl("payment")}>Pay</li>
-                        <li className="li-item" onClick={()=>setControl("myReview")}>Review</li>
-                        {/* <li className="li-item" onClick={signOut}>Log Out</li> */}
-                    </div>
                     
-                    {admin && <div>
+                    {admin?.admin && <div>
                         <li className="li-item" onClick={()=>setControl("addProduct")}>Add Product</li>
-                        <li className="li-item" onClick={()=>setControl("manageAllProduct")}>Manage Product</li>
+                        <li className="li-item" onClick={()=>setControl("manageAllProduct")}>Manage All Product</li>
+                        <li className="li-item" onClick={()=>setControl("manageAllOrder")}>Manage All Order</li>
                         <li className="li-item" onClick={()=>setControl("makeAdmin")}>Make Admin</li>
                         <li className="li-item" onClick={signOut}>Log Out</li>
+                    </div>
+                    }
+                    {!admin?.admin && <div>
+                    <li className="li-item" onClick={()=>setControl("myOrder")}>My Order</li>
+                    <li className="li-item" onClick={()=>setControl("payment")}>Pay</li>
+                    <li className="li-item" onClick={()=>setControl("myReview")}>Review</li>
+                    <li className="li-item" onClick={signOut}>Log Out</li>
                     </div>}
                 </Col>
                 <Col md={9}>
@@ -53,9 +59,9 @@ const Dashboard = () => {
                     {control === "review" && <myReview></myReview>}
                     {control === 'myReview' && <Review></Review>}
                     {control === "addProduct" && <AddProduct></AddProduct>}
-                    {/* {control === "manageOrder" && <ManageOrder></ManageOrder>} */}
                     {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
                     {control === "manageAllProduct" && <ManageAllProduct></ManageAllProduct>}
+                    {control === "manageAllOrder" && <ManageAllOrder></ManageAllOrder>}
                 </Col>
             </Row>
         </div>

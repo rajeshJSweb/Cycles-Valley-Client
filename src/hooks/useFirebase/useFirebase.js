@@ -78,11 +78,11 @@ const useFirebase = () => {
     },[])
 
     useEffect(() => {
-        fetch(`https://enigmatic-hollows-08621.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data))
-            .then(data => console.log(data))
     },[])
+
 
     const logOut = () => {
         setIsLoading(true)

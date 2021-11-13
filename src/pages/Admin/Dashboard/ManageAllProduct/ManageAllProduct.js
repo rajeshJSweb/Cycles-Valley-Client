@@ -13,15 +13,15 @@ const ManageAllProduct = () => {
 
 
     const handleDeleteProduct = id => {
-        fetch(`https://enigmatic-hollows-08621.herokuapp.com/${id}`, {
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/deleteProduct${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })
             .then(res => res.json())
             .then(data => {
-                // if (data.insertedId !== id) {
-                //     alert('Deleted')
-                // }
+                if (data.insertedId !== id) {
+                    alert('Deleted')
+                }
                 if (data.deletedCount) {
                     setControl(!control)
                 }
@@ -30,7 +30,7 @@ const ManageAllProduct = () => {
 
     return (
         <div>
-            <h2>This is manage All product</h2>
+            <h2>Manage product</h2>
         <Table striped bordered hover>
             <thead>
                 <tr>
@@ -47,8 +47,8 @@ const ManageAllProduct = () => {
                         <td>{ product?.id}</td>
                         <td>{ product?.productName}</td>
                         <td>{product?.price}</td>
-                        <td>Update</td>
-                        <td className="bg-warning delete-item" onClick={() => handleDeleteProduct(product._id)}>Delete X</td>
+                        <td className="update">Update</td>
+                        <td className="bg-warning delete-item" onClick={() => handleDeleteProduct(product?._id)}>Delete X</td>
                     </tr>)        
                 }
           

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 const AddProduct = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit,  formState: { errors } } = useForm();
 
     const onSubmit = data => {
         axios.post('https://enigmatic-hollows-08621.herokuapp.com/addProduct', data)

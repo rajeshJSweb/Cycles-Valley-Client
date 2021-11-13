@@ -23,6 +23,8 @@ import Registration from './pages/Shared/Login/Registration/Registration';
 import ExploreProduct from './pages/Shared/ExploreProduct/ExploreProduct';
 import AdminDashboard from './pages/Admin/Dashboard/AdminDashboard/AdminDashboard';
 import Footer from './pages/Shared/Footer/Footer';
+import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -36,7 +38,13 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
-          </Route>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
             <Route path='/login'>
               <Login></Login>
             </Route>
@@ -55,18 +63,7 @@ function App() {
             <Route path="/orderConfirm/:_id">
               <OrderConfirm></OrderConfirm>
             </Route>
-            <Route path="/myOrder">
-              <MyOrder></MyOrder>
-            </Route>
-            <Route path="/payment">
-              <Payment></Payment>
-            </Route>
-            <Route path='/myReview'>
-              <myReview></myReview>
-            </Route>
-            <Route path='/admin'>
-                <AdminDashboard></AdminDashboard>
-            </Route>
+          
           </Switch>
           <Footer></Footer>
       </Router>

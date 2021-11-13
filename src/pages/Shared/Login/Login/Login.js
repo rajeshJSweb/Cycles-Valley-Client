@@ -38,12 +38,7 @@ const Login = () => {
         e.preventDefault();
     };
 
-    const userSignInUsingGoogle = () => {
-        userLoginByGoogle()
-            .then(result => {  
-            history.push(redirect_uri);
-        })
-    };
+
 
     return (
         <div className="my-5">
@@ -65,8 +60,6 @@ const Login = () => {
                 <input className="btn btn-primary my-3" type="submit" value="Continue with email" />
                     <br />
                 <Link className="already my-3" to="/register">New User?</Link>
-                    <p>Or</p>
-                <Button onClick={userSignInUsingGoogle} className="btn btn-primary">Google Sign In</Button>
                 </Form>
             </div>
         </div>

@@ -9,7 +9,7 @@ const Products = () => {
     useEffect(() => {
         fetch('https://enigmatic-hollows-08621.herokuapp.com/allProducts')
             .then(res => res.json())
-            .then(data => setCycles(data))
+            .then(data => setCycles(data.slice(0,6)))
     }, []);
 
     const AddToCart = cycle => {
