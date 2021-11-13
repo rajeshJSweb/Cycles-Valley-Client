@@ -38,7 +38,7 @@ const Dashboard = () => {
                 <Col md={3} className="sidebar-container">
                     <h5>Dashboard</h5>
                     
-                    {admin?.admin && <div>
+                    {admin && <div>
                         <li className="li-item" onClick={()=>setControl("addProduct")}>Add Product</li>
                         <li className="li-item" onClick={()=>setControl("manageAllProduct")}>Manage All Product</li>
                         <li className="li-item" onClick={()=>setControl("manageAllOrder")}>Manage All Order</li>
@@ -46,12 +46,12 @@ const Dashboard = () => {
                         <li className="li-item" onClick={signOut}>Log Out</li>
                     </div>
                     }
-                    {!admin?.admin && <div>
+                    <div>
                     <li className="li-item" onClick={()=>setControl("myOrder")}>My Order</li>
                     <li className="li-item" onClick={()=>setControl("payment")}>Pay</li>
                     <li className="li-item" onClick={()=>setControl("myReview")}>Review</li>
                     <li className="li-item" onClick={signOut}>Log Out</li>
-                    </div>}
+                    </div>
                 </Col>
                 <Col md={9}>
                     {control === "myOrder"&& <MyOrder></MyOrder>}
