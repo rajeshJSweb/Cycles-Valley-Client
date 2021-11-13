@@ -67,7 +67,7 @@ const useFirebase = () => {
     const unsubscribe= onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
-                sessionStorage.setItem("email", user.email);
+                // sessionStorage.setItem("email", user.email);
             }
             else {
                 setUser({})
@@ -78,7 +78,7 @@ const useFirebase = () => {
     },[])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://enigmatic-hollows-08621.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data))
     },[])
